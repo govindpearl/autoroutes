@@ -15,8 +15,11 @@ class _thirdscreenState extends State<thirdscreen> {
   Widget build(BuildContext context) {
     return  SafeArea(
       child: Scaffold(
-        appBar: AppBar(),
+        appBar: AppBar(
+          backgroundColor: Theme.of(context).colorScheme.inversePrimary,
 
+          title: Text("welcome to third screen "),
+        ),
         body: Center(
         child: ElevatedButton(onPressed: (){}, child:Text("THIRD SCREEN")),
       ),),

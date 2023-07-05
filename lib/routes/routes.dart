@@ -4,10 +4,21 @@ part of 'routes_import.dart';
 @AutoRouterConfig(replaceInRouteName: "Route")
 class AppRouter extends $AppRouter {
 
-  RouteType get defaultRouteType => RouteType.adaptive();
+  RouteType get defaultRouteType => RouteType.custom();
 
   @override
-  List<AutoRoute> get routes => [
-    /// routes go here
+  List<CustomRoute> get routes => [
+    CustomRoute(page:FirstscreenRoute.page, path: "/",
+      transitionsBuilder:TransitionsBuilders.slideRight,
+    ),
+    CustomRoute(page: SecondscreenRoute.page,
+      transitionsBuilder:TransitionsBuilders.slideRight,
+
+    ),
+    CustomRoute(page: ThirdscreenRoute.page,
+      transitionsBuilder:TransitionsBuilders.zoomIn,
+
+    ),
+
   ];
 }
